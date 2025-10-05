@@ -25,6 +25,8 @@ ffmpeg()
     "-c:v libx264",
     "-preset ultrafast",
     "-tune zerolatency",
+    "-profile:v baseline",
+    "-level 3.0",
     "-c:a aac",
     "-f hls",
     "-hls_time 2",
