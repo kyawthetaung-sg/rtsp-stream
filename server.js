@@ -15,7 +15,8 @@ const HLS_FILE = path.join(STREAM_DIR, "camera.m3u8");
 
 app.use(cors());
 app.use(express.static(PUBLIC_DIR));
-app.use("/streams", express.static(STREAM_DIR));
+console.log(STREAM_DIR);
+app.use("/streams", express.static("/home/ubuntu/rtsp-stream/streams"));
 
 if (!fs.existsSync(STREAM_DIR)) {
   fs.mkdirSync(STREAM_DIR);
